@@ -9,9 +9,9 @@ I built this to go deeper than a basic "embed some docs and call an LLM" tutoria
 parts are the retrieval quality, the guardrails against hallucination, and an evaluation harness that
 actually drove the design decisions rather than just producing a number at the end.
 
-- **Live demo:** `https://rag-dashboard-wcm.streamlit.app/`
-- **API:** `https://rag-api-751441988751.us-central1.run.app` (docs at `/docs`)
-- **Dashboard code:** `https://github.com/CMWENDY/rag-dashboard/tree/main`
+- **Live demo:** https://rag-dashboard-wcm.streamlit.app/
+- **API:** https://rag-api-751441988751.us-central1.run.app (docs at `/docs`)
+- **Dashboard code:** https://github.com/CMWENDY/rag-dashboard/tree/main
 
 > The demo runs on free tiers (Cloud Run + Streamlit Community Cloud), so the first request after it's
 > been idle takes ~30s to wake up. After that it's quick.
