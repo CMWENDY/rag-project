@@ -1,0 +1,888 @@
+[
+  {
+    "id": "us-medical-01",
+    "type": "lookup",
+    "entity": "us",
+    "question": "What medical insurance does GitLab provide to US employees?",
+    "golden_answer": "GitLab provides medical insurance through Cigna nationwide, with Kaiser plan options for California and Hawaii residents.",
+    "expected_sources": [
+      "total-rewards-benefits-general-and-entity-benefits-inc-benefits-us-_index.md"
+    ],
+    "expected_phrases": [
+      "Cigna nationwide",
+      "Kaiser options available",
+      "California and Hawaii residents"
+    ]
+  },
+  {
+    "id": "us-dental-01",
+    "type": "lookup",
+    "entity": "us",
+    "question": "What dental benefits does GitLab offer US employees?",
+    "golden_answer": "Comprehensive dental care through Cigna, offered at two coverage levels.",
+    "expected_sources": [
+      "total-rewards-benefits-general-and-entity-benefits-inc-benefits-us-_index.md"
+    ],
+    "expected_phrases": [
+      "Comprehensive dental care",
+      "two coverage levels",
+      "DPPO 2025 Base Plan"
+    ]
+  },
+  {
+    "id": "us-vision-01",
+    "type": "lookup",
+    "entity": "us",
+    "question": "Who provides vision coverage for GitLab US employees?",
+    "golden_answer": "Vision care is provided through Cigna in partnership with EyeMed.",
+    "expected_sources": [
+      "total-rewards-benefits-general-and-entity-benefits-inc-benefits-us-_index.md"
+    ],
+    "expected_phrases": [
+      "Vision care through Cigna",
+      "partnership with EyeMed",
+      "Vision 2025 Base"
+    ]
+  },
+  {
+    "id": "us-401k-match-01",
+    "type": "lookup",
+    "entity": "us",
+    "question": "What is GitLab's 401(k) company match for US employees?",
+    "golden_answer": "GitLab matches 50% of contributions on the first 6% of earnings, up to $1,500 annually, with immediate eligibility and vesting.",
+    "expected_sources": [
+      "total-rewards-benefits-general-and-entity-benefits-inc-benefits-us-_index.md"
+    ],
+    "expected_phrases": [
+      "50% of contributions on the first 6% of earnings",
+      "up to $1,500 annually",
+      "immediate eligibility and vesting",
+      "Fidelity NetBenefits"
+    ]
+  },
+  {
+    "id": "us-life-01",
+    "type": "lookup",
+    "entity": "us",
+    "question": "How much basic life insurance does GitLab provide to US employees?",
+    "golden_answer": "Company-paid basic life insurance worth two times annual base salary, up to a maximum of $500,000, with equal AD&D coverage.",
+    "expected_sources": [
+      "total-rewards-benefits-general-and-entity-benefits-inc-benefits-us-_index.md"
+    ],
+    "expected_phrases": [
+      "two times your annual base salary",
+      "maximum benefit of $500,000",
+      "equal AD&D coverage",
+      "Automatic coverage from day one"
+    ]
+  },
+  {
+    "id": "us-pet-01",
+    "type": "lookup",
+    "entity": "us",
+    "question": "Does GitLab offer pet insurance to US employees, and through whom?",
+    "golden_answer": "Yes, pet insurance is offered through MetLife with flexible plans.",
+    "expected_sources": [
+      "total-rewards-benefits-general-and-entity-benefits-inc-benefits-us-_index.md"
+    ],
+    "expected_phrases": [
+      "MetLife Pet Insurance",
+      "No breed exclusions",
+      "Family plans for multiple pets",
+      "24/7 telehealth services"
+    ]
+  },
+  {
+    "id": "us-hsa-01",
+    "type": "lookup",
+    "entity": "us",
+    "question": "How much does GitLab contribute to the HSA for US employees?",
+    "golden_answer": "$100 per month for Team Member Only coverage, and $125 per month for Team Member + Spouse/Child/Family coverage.",
+    "expected_sources": [
+      "total-rewards-benefits-general-and-entity-benefits-inc-benefits-us-_index.md"
+    ],
+    "expected_phrases": [
+      "GitLab HSA Contributions",
+      "Team Member Only Coverage",
+      "$100 a month",
+      "$125"
+    ]
+  },
+  {
+    "id": "us-disability-01",
+    "type": "lookup",
+    "entity": "us",
+    "question": "What disability coverage does GitLab provide to US employees?",
+    "golden_answer": "Short-term and long-term disability insurance at no cost, replacing up to 66.7% of base salary for qualifying disabilities.",
+    "expected_sources": [
+      "total-rewards-benefits-general-and-entity-benefits-inc-benefits-us-_index.md"
+    ],
+    "expected_phrases": [
+      "Disability Protection",
+      "Short-term and long-term disability",
+      "66.7% of base salary",
+      "qualifying disabilities"
+    ]
+  },
+  {
+    "id": "us-cobra-01",
+    "type": "lookup",
+    "entity": "us",
+    "question": "How long can US employees continue coverage through COBRA after leaving GitLab?",
+    "golden_answer": "Up to 18 months, for medical, dental, and vision coverage.",
+    "expected_sources": [
+      "total-rewards-benefits-general-and-entity-benefits-inc-benefits-us-_index.md"
+    ],
+    "expected_phrases": [
+      "COBRA Continuation Coverage",
+      "continue medical, dental, and vision coverage",
+      "up to 18 months"
+    ]
+  },
+  {
+    "id": "us-waiver-01",
+    "type": "lookup",
+    "entity": "us",
+    "question": "What allowance does a US employee get if they waive GitLab's medical coverage?",
+    "golden_answer": "A $150 monthly medical waiver allowance (it was $300 in 2025), available if they already have group medical coverage elsewhere and actively waive GitLab's plan.",
+    "expected_sources": [
+      "total-rewards-benefits-general-and-entity-benefits-inc-benefits-us-_index.md"
+    ],
+    "expected_phrases": [
+      "Medical Waiver Allowance",
+      "$150",
+      "monthly benefit allowance",
+      "PlanSource"
+    ]
+  },
+  {
+    "id": "pto-limit-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "Does GitLab set an annual limit on how much PTO a team member can take?",
+    "golden_answer": "No. GitLab has a Flexible PTO policy with no specific annual limit, though time off exceeding 25 consecutive calendar days requires special permission.",
+    "expected_sources": [
+      "people-group-time-off-and-absence-time-off-types.md"
+    ],
+    "expected_phrases": [
+      "does not set a specific limit",
+      "25 consecutive calendar days",
+      "special permission is required",
+      "Flexible PTO"
+    ]
+  },
+  {
+    "id": "pto-longblock-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "What approval is needed for time off longer than 25 consecutive days?",
+    "golden_answer": "Special permission from your Manager, People Business Partner, and the Absence Management Team (leaves@gitlab.com).",
+    "expected_sources": [
+      "people-group-time-off-and-absence-time-off-types.md"
+    ],
+    "expected_phrases": [
+      "Manager, People Business Partner",
+      "Absence Management Team",
+      "leaves@gitlab.com",
+      "special permission is required"
+    ]
+  },
+  {
+    "id": "pto-recommend-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "What is GitLab's recommended minimum amount of time off per year?",
+    "golden_answer": "GitLab strongly recommends taking at least two consecutive weeks off and a minimum of 25 days total throughout the year.",
+    "expected_sources": [
+      "people-group-time-off-and-absence-time-off-types.md"
+    ],
+    "expected_phrases": [
+      "strongly recommend",
+      "two consecutive weeks",
+      "25 days total",
+      "throughout the year"
+    ]
+  },
+  {
+    "id": "pto-notice-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "How much advance notice should you give your manager for PTO?",
+    "golden_answer": "At least twice as many days as the planned time off (for example, 6 business days of notice for 3 days off).",
+    "expected_sources": [
+      "people-group-time-off-and-absence-time-off-types.md"
+    ],
+    "expected_phrases": [
+      "as much notice as possible",
+      "twice as many days",
+      "6 business days",
+      "3 days off"
+    ]
+  },
+  {
+    "id": "pubhol-rollover-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "Do unused public holiday balances roll over to the next year at GitLab?",
+    "golden_answer": "No. Public holiday balances must be used within the calendar year and do not roll over to the following year.",
+    "expected_sources": [
+      "people-group-time-off-and-absence-time-off-types.md"
+    ],
+    "expected_phrases": [
+      "public holiday balances",
+      "used within the calendar year",
+      "rollover to the following calendar year"
+    ]
+  },
+  {
+    "id": "parental-weeks-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "How many weeks of paid parental leave does GitLab provide?",
+    "golden_answer": "16 weeks of paid parental leave.",
+    "expected_sources": [
+      "people-group-time-off-and-absence-leave-types.md"
+    ],
+    "expected_phrases": [
+      "16 weeks of paid Parental Leave",
+      "16-week paid Parental Leave",
+      "GitLab provides 16 weeks"
+    ]
+  },
+  {
+    "id": "parental-pay-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "How much pay do you receive during GitLab parental leave?",
+    "golden_answer": "100% of your weekly wages. Where a statutory benefit applies, you must apply for it and GitLab supplements your pay to reach 100% (not more).",
+    "expected_sources": [
+      "people-group-time-off-and-absence-leave-types.md"
+    ],
+    "expected_phrases": [
+      "100% of their weekly wages",
+      "GitLab Paid Parental Leave",
+      "statutory leave"
+    ]
+  },
+  {
+    "id": "parental-eligible-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "Who is eligible for GitLab's paid parental leave?",
+    "golden_answer": "Any active team member, regardless of gender, who becomes a parent through childbirth or adoption while working at GitLab.",
+    "expected_sources": [
+      "people-group-time-off-and-absence-leave-types.md"
+    ],
+    "expected_phrases": [
+      "any active team member",
+      "regardless of gender",
+      "childbirth or adoption",
+      "becomes a parent"
+    ]
+  },
+  {
+    "id": "parental-deadline-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "By when must GitLab parental leave be used?",
+    "golden_answer": "Before the child's first birthday or the first anniversary of the adoption.",
+    "expected_sources": [
+      "people-group-time-off-and-absence-leave-types.md"
+    ],
+    "expected_phrases": [
+      "must be used prior",
+      "child's first birthday",
+      "first anniversary of the adoption"
+    ]
+  },
+  {
+    "id": "fmla-weeks-01",
+    "type": "lookup",
+    "entity": "us",
+    "question": "How many weeks of FMLA leave are US team members entitled to?",
+    "golden_answer": "Up to 12 weeks, or up to 26 workweeks in a 12-month period to care for an injured service member.",
+    "expected_sources": [
+      "people-policies-leave-of-absence-us.md"
+    ],
+    "expected_phrases": [
+      "Family Medical Leave Act",
+      "injured service member",
+      "workweeks",
+      "12 weeks"
+    ]
+  },
+  {
+    "id": "fmla-eligible-01",
+    "type": "lookup",
+    "entity": "us",
+    "question": "What are the eligibility requirements for FMLA leave at GitLab?",
+    "golden_answer": "12 months of continuous service and 1,250 hours worked in the year immediately before the leave starts.",
+    "expected_sources": [
+      "people-policies-leave-of-absence-us.md"
+    ],
+    "expected_phrases": [
+      "12 months of continuous service",
+      "1250 hours worked",
+      "immediately before the start",
+      "FMLA"
+    ]
+  },
+  {
+    "id": "military-pay-01",
+    "type": "lookup",
+    "entity": "us",
+    "question": "How is military leave (USERRA) paid at GitLab?",
+    "golden_answer": "The first 25 days are paid 100% by GitLab; after 25 days the leave is unpaid.",
+    "expected_sources": [
+      "people-policies-leave-of-absence-us.md"
+    ],
+    "expected_phrases": [
+      "Military Leave",
+      "USERRA",
+      "First 25 days",
+      "paid 100% by GitLab"
+    ]
+  },
+  {
+    "id": "loa-report-01",
+    "type": "lookup",
+    "entity": "us",
+    "question": "When must a US medical absence be reported to Tilt?",
+    "golden_answer": "Any medical absence for yourself or a family member that requires more than 5 days away from work (continuous or related non-continuous) must be reported to Tilt.",
+    "expected_sources": [
+      "people-policies-leave-of-absence-us.md"
+    ],
+    "expected_phrases": [
+      "medical related absence",
+      "more than 5 days",
+      "reported to Tilt",
+      "24-48 business hours"
+    ]
+  },
+  {
+    "id": "exp-receipt-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "When do US team members need to submit receipts for expenses?",
+    "golden_answer": "US team members only need to submit receipts for expenses over $50 USD; non-US team members must submit receipts for all expenses.",
+    "expected_sources": [
+      "finance-expenses.md"
+    ],
+    "expected_phrases": [
+      "expenses over $50 USD",
+      "submit receipts",
+      "vendor name",
+      "date of purchase"
+    ]
+  },
+  {
+    "id": "exp-navan-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "What is the expense limit for a single item through Navan?",
+    "golden_answer": "A single item up to $5,000 can be expensed via Navan; anything over $5,000 must go through the procurement process in Zip.",
+    "expected_sources": [
+      "finance-expenses.md"
+    ],
+    "expected_phrases": [
+      "single item up to $5,000",
+      "expensed via Navan",
+      "procurement process in Zip",
+      ">$5,000"
+    ]
+  },
+  {
+    "id": "exp-90days-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "Will GitLab reimburse expenses older than 90 days?",
+    "golden_answer": "No. Expenses over 90 days from the purchase date are not reimbursed unless approved by your manager.",
+    "expected_sources": [
+      "finance-expenses.md"
+    ],
+    "expected_phrases": [
+      "over 90 days from purchase date",
+      "will not be reimbursed",
+      "approved by the Manager"
+    ]
+  },
+  {
+    "id": "exp-monthly-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "What is the maximum monthly expense reimbursement limit?",
+    "golden_answer": "$10K USD per month (E-Group members $20K USD); beyond that, expenses require approval from the A/P team.",
+    "expected_sources": [
+      "finance-expenses.md"
+    ],
+    "expected_phrases": [
+      "maximum monthly limit to be reimbursed",
+      "$10K USD",
+      "$20K USD",
+      "E-Group members"
+    ]
+  },
+  {
+    "id": "exp-flight-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "How far in advance should flights be booked?",
+    "golden_answer": "Domestic flights at least 14 days in advance and international flights at least 21 days in advance.",
+    "expected_sources": [
+      "finance-expenses.md"
+    ],
+    "expected_phrases": [
+      "At least 14 days in advance",
+      "At least 21 days in advance",
+      "Dynamic Policy"
+    ]
+  },
+  {
+    "id": "stock-vesting-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "What is GitLab's standard stock option vesting schedule?",
+    "golden_answer": "A four-year vesting schedule with a one-year cliff: you vest 25% after 12 months, then monthly, owning half after two years and all after four years.",
+    "expected_sources": [
+      "total-rewards-stock-options.md"
+    ],
+    "expected_phrases": [
+      "four year vesting schedule",
+      "quarter of your stock after 12 months",
+      "half of your stock after two years",
+      "cliff period is generally one year"
+    ]
+  },
+  {
+    "id": "stock-exercise-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "How long do you have to exercise vested options after leaving GitLab?",
+    "golden_answer": "90 days after termination to exercise vested options; unvested RSUs and options are forfeited on the exit date.",
+    "expected_sources": [
+      "total-rewards-stock-options.md"
+    ],
+    "expected_phrases": [
+      "90 days post termination",
+      "exercise their vested options",
+      "Unvested RSUs and options are forfeited"
+    ]
+  },
+  {
+    "id": "stock-expire-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "When do GitLab stock options expire?",
+    "golden_answer": "10 years after they were issued, if not otherwise expired through termination of employment.",
+    "expected_sources": [
+      "total-rewards-stock-options.md"
+    ],
+    "expected_phrases": [
+      "your stock options expire",
+      "10 years after they were issued",
+      "termination of your employment"
+    ]
+  },
+  {
+    "id": "stock-espp-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "What discount does the GitLab Employee Stock Purchase Plan offer?",
+    "golden_answer": "A 15% discount on the fair market value, with up to a 24-month look-back period and purchase dates in May and November.",
+    "expected_sources": [
+      "total-rewards-stock-options.md"
+    ],
+    "expected_phrases": [
+      "15% purchase price discount",
+      "fair market value",
+      "24-month look-back",
+      "May and November"
+    ]
+  },
+  {
+    "id": "inc-referral-when-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "When is a GitLab referral bonus paid out?",
+    "golden_answer": "Once the referred new team member has been employed with the company for 3 months.",
+    "expected_sources": [
+      "total-rewards-incentives.md"
+    ],
+    "expected_phrases": [
+      "referral bonus",
+      "employed with the company for 3 months",
+      "new team member"
+    ]
+  },
+  {
+    "id": "inc-referral-amt-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "How much is the referral bonus for account executive hires?",
+    "golden_answer": "$7,000 for referrals hired to Commercial or New Business Account Executive roles, and $10,000 for Strategic or Major Account Executive roles.",
+    "expected_sources": [
+      "total-rewards-incentives.md"
+    ],
+    "expected_phrases": [
+      "$7,000 for referrals",
+      "Commercial or New Business Account Executive",
+      "$10,000 for referrals",
+      "Strategic or Major Account Executive"
+    ]
+  },
+  {
+    "id": "inc-interim-cap-01",
+    "type": "lookup",
+    "entity": "global",
+    "question": "Is there a cap on interim leadership bonuses for GTM team members?",
+    "golden_answer": "Yes. Total bonus payments for GTM team members in an interim management role cannot exceed $50,000 USD for a single interim leadership assignment.",
+    "expected_sources": [
+      "total-rewards-incentives.md"
+    ],
+    "expected_phrases": [
+      "shall not exceed $50,000 USD",
+      "single interim leadership assignment",
+      "GTM team members",
+      "interim management role"
+    ]
+  },
+  {
+    "id": "us-multihop-waiver-dental-01",
+    "type": "multi_hop",
+    "entity": "us",
+    "question": "If a US employee already has medical coverage elsewhere and waives GitLab's plan, how much is the allowance and can they still enroll in dental?",
+    "golden_answer": "They receive a $150 monthly medical waiver allowance (it was $300 in 2025) and can still enroll in dental, vision, and other benefits.",
+    "expected_sources": [
+      "total-rewards-benefits-general-and-entity-benefits-inc-benefits-us-_index.md"
+    ],
+    "expected_phrases": [
+      "$150",
+      "monthly benefit allowance",
+      "enrolling in dental",
+      "two coverage levels"
+    ]
+  },
+  {
+    "id": "us-multihop-hdhp-hsa-01",
+    "type": "multi_hop",
+    "entity": "us",
+    "question": "If a US employee picks the Cigna High Deductible Health Plan, does GitLab contribute to an HSA, and how much for family coverage?",
+    "golden_answer": "Yes. The High Deductible Health Plan is HSA-eligible, and GitLab contributes $125 per month for Team Member + Spouse/Child/Family coverage.",
+    "expected_sources": [
+      "total-rewards-benefits-general-and-entity-benefits-inc-benefits-us-_index.md"
+    ],
+    "expected_phrases": [
+      "Cigna High Deductible Health Plan",
+      "GitLab HSA Contributions",
+      "$125",
+      "Spouse/Child/Family"
+    ]
+  },
+  {
+    "id": "mh-fmla-eligibility-01",
+    "type": "multi_hop",
+    "entity": "us",
+    "question": "Can a US employee who has worked at GitLab for 8 months take FMLA leave, and if not, when would they qualify and for how long?",
+    "golden_answer": "No, because FMLA requires 12 months of continuous service and 1,250 hours worked. Once eligible, they can take up to 12 weeks.",
+    "expected_sources": [
+      "people-policies-leave-of-absence-us.md"
+    ],
+    "expected_phrases": [
+      "12 months of continuous service",
+      "1250 hours worked",
+      "Family Medical Leave Act",
+      "12 weeks"
+    ]
+  },
+  {
+    "id": "mh-stock-leave-01",
+    "type": "multi_hop",
+    "entity": "global",
+    "question": "If I leave GitLab with some vested options and some unvested RSUs, what happens to each?",
+    "golden_answer": "Vested options: you have 90 days after termination to exercise them. Unvested RSUs and options: they are forfeited on your exit date.",
+    "expected_sources": [
+      "total-rewards-stock-options.md"
+    ],
+    "expected_phrases": [
+      "leaves GitLab",
+      "90 days post termination",
+      "exercise their vested options",
+      "Unvested RSUs and options are forfeited"
+    ]
+  },
+  {
+    "id": "mh-exp-receipt-zip-01",
+    "type": "multi_hop",
+    "entity": "global",
+    "question": "As a US employee buying a single $6,000 item for work, do I need a receipt and how should I expense it?",
+    "golden_answer": "Yes, you need a receipt because it is over $50, and because it is over $5,000 it must go through the procurement process in Zip rather than Navan.",
+    "expected_sources": [
+      "finance-expenses.md"
+    ],
+    "expected_phrases": [
+      "expenses over $50 USD",
+      "single item up to $5,000",
+      "procurement process in Zip",
+      ">$5,000"
+    ]
+  },
+  {
+    "id": "mh-parental-pto-01",
+    "type": "multi_hop",
+    "entity": "global",
+    "question": "Can I add PTO onto my 16-week parental leave, and how much notice do I need to give?",
+    "golden_answer": "Yes, you can supplement parental leave with Flexible PTO with manager coordination, following the standard PTO notice of at least twice as many days as the time requested.",
+    "expected_sources": [
+      "people-group-time-off-and-absence-leave-types.md",
+      "people-group-time-off-and-absence-time-off-types.md"
+    ],
+    "expected_phrases": [
+      "Parental Leave",
+      "16 weeks",
+      "Flexible Paid Time Off",
+      "twice as many days"
+    ]
+  },
+  {
+    "id": "mh-pto-longblock-01",
+    "type": "multi_hop",
+    "entity": "global",
+    "question": "I want to take 30 consecutive days of PTO. Is that allowed under GitLab's policy, and what approval do I need?",
+    "golden_answer": "GitLab's Flexible PTO has no fixed annual limit, but because 30 days exceeds 25 consecutive calendar days, it requires special permission from your Manager, People Business Partner, and the Absence Management Team.",
+    "expected_sources": [
+      "people-group-time-off-and-absence-time-off-types.md"
+    ],
+    "expected_phrases": [
+      "does not set a specific limit",
+      "25 consecutive calendar days",
+      "special permission is required",
+      "Absence Management Team"
+    ]
+  },
+  {
+    "id": "mh-espp-contribution-01",
+    "type": "multi_hop",
+    "entity": "global",
+    "question": "What discount does the GitLab ESPP offer, and can I stop contributing partway through an offering period?",
+    "golden_answer": "The ESPP offers a 15% discount on fair market value (with up to a 24-month look-back), and yes, you may reduce your contribution to 0% during an offering period.",
+    "expected_sources": [
+      "total-rewards-stock-options.md"
+    ],
+    "expected_phrases": [
+      "15% purchase price discount",
+      "24-month look-back",
+      "reduce their contribution to 0%",
+      "offering period"
+    ]
+  },
+  {
+    "id": "mh-hotel-drycleaning-01",
+    "type": "multi_hop",
+    "entity": "global",
+    "question": "On a 6-night hotel stay, what is the per-night reimbursement limit and can I expense dry cleaning?",
+    "golden_answer": "Hotels are reimbursable up to $300 USD per night inclusive of tax for standard rooms, and dry cleaning is allowable because the stay is over 5 days.",
+    "expected_sources": [
+      "finance-expenses.md"
+    ],
+    "expected_phrases": [
+      "Hotel stays are reimbursable",
+      "$300 USD",
+      "Dry cleaning is allowable",
+      "over 5 days"
+    ]
+  },
+  {
+    "id": "mh-flight-navan-01",
+    "type": "multi_hop",
+    "entity": "global",
+    "question": "How far in advance should I book a domestic flight, and what happens if I book it outside Navan?",
+    "golden_answer": "Book domestic flights at least 14 days in advance; anything booked outside Navan is flagged as Out of Policy and must be reviewed by your manager and the AP team.",
+    "expected_sources": [
+      "finance-expenses.md"
+    ],
+    "expected_phrases": [
+      "At least 14 days in advance",
+      "booked outside of Navan",
+      "Out of Policy",
+      "reviewed by your manager"
+    ]
+  },
+  {
+    "id": "noans-submarine-01",
+    "type": "no_answer",
+    "entity": "us",
+    "question": "What is GitLab's policy on submarine leave for US employees?",
+    "golden_answer": "The corpus contains no such policy; the system should decline to answer.",
+    "expected_sources": [],
+    "expected_phrases": []
+  },
+  {
+    "id": "noans-company-car-01",
+    "type": "no_answer",
+    "entity": "us",
+    "question": "Does GitLab provide a company car to US employees?",
+    "golden_answer": "Not covered in the corpus; the system should decline to answer.",
+    "expected_sources": [],
+    "expected_phrases": []
+  },
+  {
+    "id": "noans-gym-01",
+    "type": "no_answer",
+    "entity": "global",
+    "question": "Does GitLab reimburse gym memberships?",
+    "golden_answer": "Not covered in the corpus; the system should decline to answer.",
+    "expected_sources": [],
+    "expected_phrases": []
+  },
+  {
+    "id": "noans-sabbatical-01",
+    "type": "no_answer",
+    "entity": "global",
+    "question": "What is GitLab's sabbatical policy?",
+    "golden_answer": "Not covered in the corpus; the system should decline to answer.",
+    "expected_sources": [],
+    "expected_phrases": []
+  },
+  {
+    "id": "noans-childcare-01",
+    "type": "no_answer",
+    "entity": "us",
+    "question": "Does GitLab offer onsite childcare for US employees?",
+    "golden_answer": "Not covered in the corpus; the system should decline to answer.",
+    "expected_sources": [],
+    "expected_phrases": []
+  },
+  {
+    "id": "noans-student-loan-01",
+    "type": "no_answer",
+    "entity": "us",
+    "question": "Does GitLab offer student loan repayment assistance to US employees?",
+    "golden_answer": "Not covered in the corpus; the system should decline to answer.",
+    "expected_sources": [],
+    "expected_phrases": []
+  },
+  {
+    "id": "noans-fourday-01",
+    "type": "no_answer",
+    "entity": "global",
+    "question": "Does GitLab offer a four-day work week?",
+    "golden_answer": "Not covered in the corpus; the system should decline to answer.",
+    "expected_sources": [],
+    "expected_phrases": []
+  },
+  {
+    "id": "noans-freelunch-01",
+    "type": "no_answer",
+    "entity": "global",
+    "question": "Does GitLab provide free lunch or office meals to employees?",
+    "golden_answer": "Not covered in the corpus; the system should decline to answer.",
+    "expected_sources": [],
+    "expected_phrases": []
+  },
+  {
+    "id": "noans-signing-bonus-01",
+    "type": "no_answer",
+    "entity": "global",
+    "question": "Does GitLab offer signing bonuses to new hires?",
+    "golden_answer": "Not covered in the corpus; the system should decline to answer.",
+    "expected_sources": [],
+    "expected_phrases": []
+  },
+  {
+    "id": "noans-wellness-01",
+    "type": "no_answer",
+    "entity": "global",
+    "question": "Does GitLab provide a wellness stipend?",
+    "golden_answer": "Not covered in the corpus; the system should decline to answer.",
+    "expected_sources": [],
+    "expected_phrases": []
+  },
+  {
+    "id": "ambig-match-01",
+    "type": "ambiguous",
+    "entity": "us",
+    "question": "What's the company match?",
+    "golden_answer": "Ambiguous: most likely the 401(k) match (50% of the first 6% of earnings, up to $1,500/year). A good answer states that assumption or asks which benefit is meant.",
+    "expected_sources": [
+      "total-rewards-benefits-general-and-entity-benefits-inc-benefits-us-_index.md"
+    ],
+    "expected_phrases": []
+  },
+  {
+    "id": "ambig-coverage-01",
+    "type": "ambiguous",
+    "entity": "us",
+    "question": "How much coverage do I get?",
+    "golden_answer": "Ambiguous: coverage could mean medical, dental, vision, life, or disability. A good answer asks which benefit is meant instead of guessing.",
+    "expected_sources": [
+      "total-rewards-benefits-general-and-entity-benefits-inc-benefits-us-_index.md"
+    ],
+    "expected_phrases": []
+  },
+  {
+    "id": "ambig-timeoff-01",
+    "type": "ambiguous",
+    "entity": "global",
+    "question": "How many days off do I get?",
+    "golden_answer": "Ambiguous: GitLab uses Flexible PTO with no set number, and the question could also mean public holidays or leave types. A good answer clarifies which is meant and notes PTO has no fixed limit.",
+    "expected_sources": [
+      "people-group-time-off-and-absence-time-off-types.md"
+    ],
+    "expected_phrases": []
+  },
+  {
+    "id": "ambig-bonus-01",
+    "type": "ambiguous",
+    "entity": "global",
+    "question": "What's the bonus?",
+    "golden_answer": "Ambiguous: GitLab has several bonus types (referral, interim-role, discretionary, value awards). A good answer asks which bonus is meant.",
+    "expected_sources": [
+      "total-rewards-incentives.md"
+    ],
+    "expected_phrases": []
+  },
+  {
+    "id": "ambig-notice-01",
+    "type": "ambiguous",
+    "entity": "global",
+    "question": "How much notice do I need to give?",
+    "golden_answer": "Ambiguous: notice depends on the context (PTO, parental leave, resignation). A good answer asks which situation is meant; for PTO it is at least twice the days requested.",
+    "expected_sources": [
+      "people-group-time-off-and-absence-time-off-types.md"
+    ],
+    "expected_phrases": []
+  },
+  {
+    "id": "ambig-contribute-01",
+    "type": "ambiguous",
+    "entity": "us",
+    "question": "How much can I contribute?",
+    "golden_answer": "Ambiguous: contributions could mean the 401(k), the HSA, or the ESPP, which have different rules. A good answer asks which plan is meant.",
+    "expected_sources": [
+      "total-rewards-benefits-general-and-entity-benefits-inc-benefits-us-_index.md"
+    ],
+    "expected_phrases": []
+  },
+  {
+    "id": "ambig-equity-01",
+    "type": "ambiguous",
+    "entity": "global",
+    "question": "How does my equity work?",
+    "golden_answer": "Ambiguous: equity could mean stock options, RSUs, or the ESPP, which have different vesting and rules. A good answer asks which is meant.",
+    "expected_sources": [
+      "total-rewards-stock-options.md"
+    ],
+    "expected_phrases": []
+  },
+  {
+    "id": "ambig-reimburse-01",
+    "type": "ambiguous",
+    "entity": "global",
+    "question": "How do I get reimbursed?",
+    "golden_answer": "Ambiguous: reimbursement depends on the expense type and amount (for example, Navan for items up to $5,000, Zip above that). A good answer asks what is being reimbursed.",
+    "expected_sources": [
+      "finance-expenses.md"
+    ],
+    "expected_phrases": []
+  }
+]

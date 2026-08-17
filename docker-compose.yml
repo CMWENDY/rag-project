@@ -1,0 +1,52 @@
+services:
+  chroma:
+    image: chromadb/chroma:1.5.9
+    environment:
+      - IS_PERSISTENT=TRUE
+      - PERSIST_DIRECTORY=/chroma/data
+    volumes:
+      - chroma-data:/chroma/data
+
+  seed:
+    build: .
+    image: rag-app
+    command: python seed.py
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - CHROMA_HOST=chroma
+      - CHROMA_PORT=8000
+    volumes:
+      - processed-data:/app/docs/processed
+    depends_on:
+      - chroma
+    restart: "no"
+
+  api:
+    image: rag-app
+    command: uvicorn api:app --host 0.0.0.0 --port 8000
+    environment:
+      - DEMO_KEY=${DEMO_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - CHROMA_HOST=chroma
+      - CHROMA_PORT=8000
+    volumes:
+      - processed-data:/app/docs/processed
+    ports:
+      - "8000:8000"
+    depends_on:
+      seed:
+        condition: service_completed_successfully
+
+  frontend:
+    image: rag-app
+    command: streamlit run dashboard.py --server.port 8501 --server.address 0.0.0.0
+    environment:
+      - API_URL=http://api:8000
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+
+volumes:
+  chroma-data:
+  processed-data:

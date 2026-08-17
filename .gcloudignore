@@ -1,0 +1,9 @@
+# what gcloud uploads to Cloud Build
+venv/
+__pycache__/
+*.pyc
+.git/
+.gitignore
+.env
+archive/
+notes/

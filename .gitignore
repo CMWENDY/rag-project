@@ -1,0 +1,21 @@
+# secrets
+.env
+.streamlit/secrets.toml
+
+# python
+venv/
+__pycache__/
+*.pyc
+
+# macOS / editors
+.DS_Store
+.vscode/
+.idea/
+
+#learning notes
+notes/
+
+#full corpus raw + indexed data
+archive/
+docs/chroma_db/
+docs/processed/

@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+streamlit
+requests
+slowapi
+openai
+chromadb==1.5.9
+rank_bm25
+sentence-transformers
+python-dotenv
+numpy
+langchain-text-splitters
