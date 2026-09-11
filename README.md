@@ -93,7 +93,7 @@ chunking strategy:
 | No-answer decline rate | **0.90** | it correctly refused 9 of 10 unanswerable questions |
 | Answer correctness | **0.86** | vs. hand-written answers (LLM-judged) |
 
-Broken down by question type, correctness was **0.94 on lookups**, **0.85 on multi-hop**, and
+Broken down by question type, correctness was **0.96 on lookups**, **0.85 on multi-hop**, and
 **0.44 on ambiguous** questions — that last one is the clear weak spot (more on that below).
 
 ### Choosing a chunking strategy with data
