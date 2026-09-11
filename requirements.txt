@@ -10,3 +10,5 @@ sentence-transformers
 python-dotenv
 numpy
 langchain-text-splitters
+pypdf
+beautifulsoup4
