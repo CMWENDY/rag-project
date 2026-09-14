@@ -8,6 +8,21 @@ try:
 except Exception:
     API = os.getenv("API_URL", "http://127.0.0.1:8000")
 
+WAKING_MSG = "The API is waking up (cold start). Give it a minute and try again."
+
+def post_with_retry(path, body, timeout=120):
+    # a cold Cloud Run container can time out the first request; by the retry it's usually warm
+    try:
+        return requests.post(f"{API}{path}", json=body, timeout=timeout).json()
+    except requests.exceptions.Timeout:
+        return requests.post(f"{API}{path}", json=body, timeout=timeout).json()
+
+def show_request_error(e):
+    if isinstance(e, requests.exceptions.Timeout):
+        st.warning(WAKING_MSG)
+    else:
+        st.error(f"Could not reach the API — is it running? ({e})")
+
 st.set_page_config(page_title="GitLab Benefits Q&A", layout="wide")
 st.title("GitLab Benefits Q&A")
 
@@ -29,9 +44,9 @@ if ask and question.strip():
     }
     try:
         with st.spinner("Waking the server and thinking… (the first request can take ~30s)"):
-            st.session_state.result = requests.post(f"{API}/v1/ask", json=payload, timeout=120).json()
+            st.session_state.result = post_with_retry("/v1/ask", payload)
     except requests.exceptions.RequestException as e:
-        st.error(f"Could not reach the API — is it running? ({e})")
+        show_request_error(e)
 
 def link_citations(answer):
     answer = answer.replace("$", "&#36;")
@@ -71,8 +86,8 @@ if st.checkbox("Compare hybrid vs. dense-only retrieval"):
             "strategy": strategy, "top_k": top_k}
     try:
         with st.spinner("Running both retrieval methods…"):
-            hybrid = requests.post(f"{API}/v1/retrieve", json={**body, "mode": "hybrid"}, timeout=120).json()
-            dense  = requests.post(f"{API}/v1/retrieve", json={**body, "mode": "dense"}, timeout=120).json()
+            hybrid = post_with_retry("/v1/retrieve", {**body, "mode": "hybrid"})
+            dense  = post_with_retry("/v1/retrieve", {**body, "mode": "dense"})
 
         left, right = st.columns(2)
         with left:
@@ -84,4 +99,4 @@ if st.checkbox("Compare hybrid vs. dense-only retrieval"):
             for r in dense["retrieved"]:
                 st.write(f"{r['rank']}. {r['source']}")
     except requests.exceptions.RequestException as e:
-        st.error(f"Could not reach the API — is it running? ({e})")
+        show_request_error(e)
